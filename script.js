@@ -25,12 +25,7 @@ function showMessage(answer) {
 }
 
 
- // Función para asegurarse de que el audio siempre se reproduce
- window.onload = function() {
+window.onload = function() {
     var audio = document.getElementById('audioPlayer');
-    
-    // Si el audio no se está reproduciendo, lo iniciamos
-    if (audio.paused) {
-      audio.play();
-    }
+    audio.play(); // Intenta reproducir el audio cuando la página se cargue
   };

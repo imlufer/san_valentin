@@ -62,5 +62,5 @@ body {
     text-decoration: none;
 }
 #audioPlayer{
-    display: none;
+    display: block;
 }

@@ -25,20 +25,14 @@ function showMessage(answer) {
 }
 
 
-window.addEventListener('load', function () {
-    var audio = document.getElementById('audioPlayer');
-    
-    // Esperamos a que el audio esté listo para reproducirse
-    audio.addEventListener('canplaythrough', function() {
-      audio.play().catch(function(error) {
-        console.log("Error en la reproducción automática: ", error);
-      });
-    });
+ // Seleccionamos el botón y el reproductor de audio
+ const audio = document.getElementById('audioPlayer');
+ const playButton = document.getElementById('playButton');
 
-    // Intentamos reproducirlo de inmediato en caso de que 'canplaythrough' no se dispare
-    if (audio.paused) {
-      audio.play().catch(function(error) {
-        console.log("Error en la reproducción automática: ", error);
-      });
-    }
-  });
+ // Agregamos un evento de clic al botón para reproducir el audio
+ playButton.addEventListener('click', function() {
+   audio.play().catch(function(error) {
+     console.log("Error en la reproducción: ", error);
+   });
+   playButton.style.display = 'none'; // Ocultamos el botón después de hacer clic
+ });

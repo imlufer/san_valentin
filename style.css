@@ -6,7 +6,11 @@ body {
     background: linear-gradient(135deg, #ff758c, #ff7eb3);
     font-family: Arial, sans-serif;
     margin: 0;
+    flex-direction: column;
+    position: relative;
 }
+
+/* Estilos de la tarjeta */
 .card {
     background: white;
     padding: 20px;
@@ -17,7 +21,9 @@ body {
     overflow: hidden;
     transition: all 0.5s ease-in-out;
     width: 300px;
+    z-index: 1;
 }
+
 .btn {
     background: #ff4d6d;
     color: white;
@@ -29,9 +35,11 @@ body {
     margin: 10px;
     transition: transform 0.2s;
 }
+
 .btn:hover {
     transform: scale(1.1);
 }
+
 .message {
     font-size: 22px;
     color: #ff4d6d;
@@ -44,11 +52,13 @@ body {
     overflow: hidden;
     display: block;
 }
+
 .message.show {
     opacity: 1;
     transform: scale(1);
     max-height: 500px;
 }
+
 .whatsapp-btn {
     background: #25D366;
     color: white;
@@ -61,6 +71,32 @@ body {
     display: none;
     text-decoration: none;
 }
-#audioPlayer{
+
+/* Estilos para el reproductor de audio (invisible por defecto) */
+#audioPlayer {
+    display: none;
+}
+
+/* Estilos para el botón de reproducir audio */
+#playButton {
+    background-color: #ff2385;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+    text-align: center;
     display: block;
+    position: absolute;
+    bottom: 20px; /* Lo coloca en la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Para centrar el botón */
+}
+
+#playButton:hover {
+    background-color: #FF61A6;
 }

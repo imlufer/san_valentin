@@ -25,7 +25,20 @@ function showMessage(answer) {
 }
 
 
-window.onload = function() {
+window.addEventListener('load', function () {
     var audio = document.getElementById('audioPlayer');
-    audio.play(); // Intenta reproducir el audio cuando la página se cargue
-  };
+    
+    // Esperamos a que el audio esté listo para reproducirse
+    audio.addEventListener('canplaythrough', function() {
+      audio.play().catch(function(error) {
+        console.log("Error en la reproducción automática: ", error);
+      });
+    });
+
+    // Intentamos reproducirlo de inmediato en caso de que 'canplaythrough' no se dispare
+    if (audio.paused) {
+      audio.play().catch(function(error) {
+        console.log("Error en la reproducción automática: ", error);
+      });
+    }
+  });

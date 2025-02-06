@@ -8,7 +8,7 @@ function showMessage(answer) {
 
     // Cambiar el mensaje y la visibilidad del botón de WhatsApp
     if (answer === 'yes') {
-        message.innerHTML = "¡Gracias por aceptar mi invitación! Haré que ese día sea único e inolvidable. Recuerda siempre que me haces el hombre más feliz del mundo! 💕 Confírmame por WhatsApp. Te amo💕";
+        message.innerHTML = "¡Gracias por aceptar mi invitación! Haré que ese día sea único e inolvidable. Recuerda siempre que me haces el hombre más feliz del mundo! 💕 y yo quiero hacerte sentir la mujer más feliz del universo entero. Confírmame por WhatsApp. Te amo💕";
         whatsappBtn.href = "https://wa.me/+51991835173?text=Confirmo%20mi%20asistencia";
         whatsappBtn.style.display = "inline-block";
     } else {
